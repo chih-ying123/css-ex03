@@ -233,6 +233,51 @@ body{
     display: flex;
     justify-content: space-between;
 }
-#about_me .my_info div{
+#about_me .my_info>div{
     width: 30%;
+}
+#about_me .skill{
+    margin: 25px 0;
+}
+#about_me .my_skills .text{
+    display: flex;
+    justify-content: space-between;
+}
+#about_me .my_skills p{
+    margin-bottom: 8px;
+}
+#about_me .my_skills .percent_bar{
+    width: 100%;
+    height: 10px;
+    background-color: rgb(235, 229, 229);
+    border-radius: 5px;
+}
+#about_me .my_skills .percent{
+    width: 80%;
+    height: 10px;
+    background-color: rgb(231, 195, 195);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/*--footer--*/
+#footer{
+    background-color: #000;
+}
+#footer .content{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+#footer .copyright, #footer .icon{
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+#footer .icon ul{
+    display: flex;
+}
+#footer .icon a{
+    color: #fff;
+    padding: 0 10px;
 }
