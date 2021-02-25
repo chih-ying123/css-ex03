@@ -4,7 +4,7 @@
 .content{
     width: 70%;
     margin: 0px auto;
-    padding: 80px 0;
+    padding: 80px 0;   
 }
 .left_box, .right_box{
     width: 50%;
@@ -22,21 +22,20 @@ video{
 h1{
     line-height: 40px;
 }
-h2{
+h2,h3{
     margin-bottom: 30px;
-    /* margin: 35px 0;*/
     text-transform: uppercase;
 }
 p{
-    margin-bottom: 15px;
+    margin-bottom: 35px;
     line-height: 25px;
 }
 a{
     text-transform: uppercase;
 }
-/* 網頁主色調 色票 #f5efef  #f6f7fb  */
-.body{
-    background-color: #f6f7fb;
+/* 網頁主色調 色票 #f5efef  #f6f7fc  */
+body{
+    background-color: #f6f7fc;
 }
 .header, #featured{
     background-color: #f5efef;
@@ -97,7 +96,7 @@ a{
 #services .hover_bg{
     position: relative;
 }
-#services a{
+#services a .text{
     position: absolute;
     top:48%;
     left: 39%;
@@ -106,7 +105,10 @@ a{
     border-radius: 5px;
     opacity: .8;
 }
-    #services a:hover{
+#services .right_box a .text{
+    left: 43%;
+}
+    #services a .text:hover{
         opacity: 1;
     }
 
@@ -124,11 +126,113 @@ a{
     flex-direction: column;
     justify-content: center;
 }
-#featured p{
-    margin-bottom: 35px;
-}
 #featured a{
     padding: 15px 25px;
     background-color: #fff;
     border-radius: 30px;
+}
+
+/*--stories--*/
+#stories{
+    text-align: center;
+}
+#stories .stories{
+    display: flex;
+    justify-content: space-between;
+}
+#stories .story{
+    width: 31%;
+}
+#stories img{
+    display:block;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+#stories h3{
+    padding: 20px;
+    background-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#stories .cover{
+    position: relative;
+}
+#stories .cover .text{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    opacity: 0;
+
+    transition: all 0.5s;
+}
+    #stories .cover .text:hover{
+        opacity: 1;
+    }
+
+/*--someone say--*/
+#someone_say{
+    text-align: center;
+    padding: 30px;
+    background-image: url("../images/art/bg16.jpg");
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position: center;
+    background-attachment: fixed;
+}
+#someone_say .content{
+    width: 40%;
+}
+#someone_say h1,#someone_say h4,#someone_say p{
+    color: #fff;
+    opacity: .8;
+    line-height: 30px;
+}
+#someone_say h1{
+    font-size: 90px;
+    line-height: 10px;
+    opacity: .8;
+}
+#someone_say h4{
+    opacity: .9;
+}
+#someone_say p{
+    margin-top: 4px;
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+
+/*--about me--*/
+#about_me .my_story{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+#about_me .left_box,#about_me .right_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#about_me .left_box .small{
+    font-size: 14px;
+}
+#about_me .left_box a{
+    padding: 15px 25px;
+    background-color: #fff;
+    border-radius: 30px;
+}
+#about_me .my_info{
+    display: flex;
+    justify-content: space-between;
+}
+#about_me .my_info div{
+    width: 30%;
 }
