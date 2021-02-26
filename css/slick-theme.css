@@ -90,6 +90,7 @@
 .slick-prev:before
 {
     content: '←';
+    
 }
 [dir='rtl'] .slick-prev:before
 {
@@ -98,7 +99,7 @@
 
 .slick-next
 {
-    right: 35px;
+    right: 30px;
 }
 [dir='rtl'] .slick-next
 {
@@ -193,7 +194,7 @@
     text-align: center;
 
     opacity: .7;
-    color: #fff;
+    color: rgb(218, 214, 214);
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

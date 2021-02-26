@@ -40,22 +40,28 @@
                     </ul>
                 </div>
             </div>
-    
-            <div class="AD">
-                <ul class="slides">
-                    <li><img src="images/art/cw1.jpg" alt=""></li>
-                    <li><img src="images/art/cw2.jpg" alt=""></li>
-                    <li><img src="images/art/cw3.jpg" alt=""></li>
-                    <li><img src="images/art/cw4.jpg" alt=""></li>
-                    <li><img src="images/art/cw5.jpg" alt=""></li>
-                    <li><img src="images/art/cw6.jpg" alt=""></li>
-                    <li><img src="images/art/cw7.jpg" alt=""></li>
-                    <li><img src="images/art/cw8.jpg" alt=""></li>
-                    <li><img src="images/art/cw9.jpg" alt=""></li>
-                </ul>
-            </div>
 
         </div>
+    </div>
+
+    <div class="AD">
+
+        <div class="content">
+
+            <ul class="slides">
+                <li><img src="images/art/cw1.jpg" alt=""></li>
+                <li><img src="images/art/cw2.jpg" alt=""></li>
+                <li><img src="images/art/cw3.jpg" alt=""></li>
+                <li><img src="images/art/cw4.jpg" alt=""></li>
+                <li><img src="images/art/cw5.jpg" alt=""></li>
+                <li><img src="images/art/cw6.jpg" alt=""></li>
+                <li><img src="images/art/cw7.jpg" alt=""></li>
+                <li><img src="images/art/cw8.jpg" alt=""></li>
+                <li><img src="images/art/cw9.jpg" alt=""></li>
+            </ul>
+
+        </div>
+        
     </div>
 
     <div id="services">
@@ -70,7 +76,9 @@
                     <div class="hover_bg">
                         <a href="#">
                             <img src="images/art/si34.jpg" alt="">
-                            <p class="text">engagement</p>
+                            <div class="hover">
+                                <p class="text">engagement</p>
+                            </div>
                         </a>
                     </div>
                     
@@ -94,7 +102,9 @@
                     <div class="hover_bg">
                         <a href="#">
                             <img src="images/art/si33.jpg" alt="">
-                            <p class="text">wedding</p>
+                            <div class="hover">
+                                <p class="text">wedding</p>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -123,7 +133,7 @@
                     explicabo facilis delectus, nisi pariatur! Dignissimos deserunt 
                     quae.
                 </p>
-                <a href="#">check all video</a>
+                <div><a href="#">check all video</a></div>
             </div>
 
         </div>
@@ -219,7 +229,7 @@
                         deserunt consectetur corporis optio ea enim. Id, vel reprehenderit.
                         esse facilis itaque ipsum.provident culpa perferendis
                     </p>
-                    <a href="#">more about me</a>
+                    <div><a href="#">more about me</a></div>
                 </div>
     
                 <div class="right_box">
@@ -282,14 +292,14 @@
                 <div class="my_equipment">
                     <h3>my equipment</h3>
                     <ul>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem, ipsum dolor.</li>
-                        <li>dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit.</li>
-                        <li>consectetur adipisicing elit. Beatae!</li>
-                        <li>Quidem laudantium soluta</li>
-                        <li>Lorem, ipsum dolor.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li><span>●</span>Lorem ipsum dolor sit amet.</li>
+                        <li><span>●</span>Lorem, ipsum dolor.</li>
+                        <li><span>●</span>dolor sit amet consectetur adipisicing.</li>
+                        <li><span>●</span>Lorem ipsum dolor sit.</li>
+                        <li><span>●</span>consectetur adipisicing elit. Beatae!</li>
+                        <li><span>●</span>Quidem laudantium soluta</li>
+                        <li><span>●</span>Lorem, ipsum dolor.</li>
+                        <li><span>●</span>Lorem ipsum dolor sit amet.</li>
                     </ul>
                 </div>
     
@@ -326,19 +336,34 @@
 
     <script>
 
-        
-
         $(document).ready(function(){
             $('.slides').slick({
+                centerMode: true, //第一個在中心
+                centerPadding: '0px',
                 slidesToShow: 3, //顯示幾個
                 slidesToScroll: 1, //每次動幾個
                 arrows: true,  //方向圖示
-                dots: true
+                dots: true,
+                
              });
         });
 
-
+        $(document).ready(function(){
+            $(window).scroll(function(){ //視窗滾動
+                var scrollTop =  $(window).scrollTop();  // 視窗滾動Top位置的數值
+                var servicesTop = $('#services').offset().top;  // services設置的位置數值 
+                // offset() 用來得知元素的座標
+                console.log(scrollTop,servicesTop); 
+               if (scrollTop > servicesTop){
+                   $('.header').addClass('fixed');
+               }else{
+                $('.header').removeClass('fixed');
+               }
+            });
+        });
     </script>
+
+    
 
 </body>
 </html>
