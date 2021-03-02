@@ -1,16 +1,11 @@
 *{
     color: #555;
 }
+
 .content{
-    width: 70%;
+    width: 75%;
     margin: 0px auto;
     padding: 80px 0;   
-}
-.left_box, .right_box{
-    width: 50%;
-}
-.left_box{
-    margin-right: 40px;
 }
 img{
     border-radius: 5px;
@@ -51,6 +46,7 @@ body{
 .header .title{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 0;
 }
 .fixed{
@@ -59,64 +55,91 @@ body{
     width: 100%;
     padding: 0;
     background-color: #fff;
+    z-index: 98;
 }
-.title .logo{
-    display: flex;
-    align-items: center;
+.title .nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0;
 }
-    /*選單控制*/
-    #menu_control:checked ~ .title .nav,
-    #menu_control:checked ~ .title .icon{
-        position: absolute;
-        right: 0;
-        transition: .5s;
-    }
-
-.title .nav, .title .icon{
-    display: flex;
-    align-items: center;
-}
-.title ul{
-    display: flex;
+.title .nav ul{
+    margin: 20px;
 }
 .title .nav a{
-    padding: 0 22px;
+    padding: 12px;
 }
-    .title .nav a:hover{
-        font-weight: bolder;
-    }
+.title .icon{
+    position: absolute;
+    right:0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0;
+}
+.title .icon ul{
+    display: flex;
+}
 .title .icon a{
-    padding: 0 10px;
+    padding: 5px;
+}
+.title label .fa-times{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.title .fas{
+    font-size: 20px;
+}
+#menu_control{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+#menu_control:checked ~ .title .nav,
+#menu_control:checked ~ .title .icon{
+    position: absolute;
+    width: 200px;
+    z-index: 98;
+    opacity: 1;
+    background-color: #fff;
+}
+#menu_control:checked ~ .title .nav{
+    height: 100vh;
+}
+#menu_control:checked ~ .title label .fa-times{
+    position: absolute;
+    top:10px;
+    right:10px;
+    z-index: 99;
+    opacity: 1;
 }
 
+/*--輪播--*/
 .AD .content{
     padding-top: 0;
 }
-/*--輪播圖片間距--*/
+    /*--圖片間距--*/
 .slick-slide {
-    margin-left: 15px;
+    margin-left: 10px;
 }
 .slick-list {
-    margin-left: -15px;
+    margin-left: -10px;
     border-radius: 5px;
+}
+    /*方向大小*/
+.slick-prev:before,
+.slick-next:before{
+    font-size: 30px;
 }
 
 /*--services--*/
-#services .content{
-    display: flex;
-    justify-content: space-between;
-}
 #services .left_box{
     text-align: right;
 }
 #services h1{
     margin-bottom: 50px;
 }
-#services .left_box, #services .right_box{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-} 
 #services .left_box p{
     margin-top: 15px;
 } 
@@ -137,7 +160,8 @@ body{
     padding: 10px;
     background-color: #fff;
     border-radius: 5px;
-    opacity: .8;
+    opacity: .7;
+    transition: .3s;
 }
 #services .right_box a .text{
     left: 43%;
@@ -147,18 +171,13 @@ body{
     }
 
 /*--featured--*/
-#featured .content{
-    display: flex;
-    justify-content: space-between;
-}
+
 #featured .left_box {
-    width: 65%;
-}
-#featured .right_box {
-    width: 35%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
+}
+#featured h2 {
+    margin-top: 35px;
 }
 #featured a{
     padding: 15px 25px;
@@ -170,15 +189,9 @@ body{
 #stories{
     text-align: center;
 }
-#stories .stories{
-    display: flex;
-    justify-content: space-between;
-}
-#stories .story{
-    width: 31%;
-}
 #stories img{
     display:block;
+    width: 100%;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 }
@@ -218,7 +231,7 @@ body{
     padding: 30px;
     background-image: url("../images/art/bg16.jpg");
     background-repeat: no-repeat;
-    background-size: 200%;
+    background-size: 250%;
     background-position: center;
     background-attachment: fixed;
 }
@@ -246,29 +259,17 @@ body{
 
 /*--about me--*/
 #about_me .my_story{
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 40px;
-}
-#about_me .left_box,#about_me .right_box{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 #about_me .left_box .small{
     font-size: 14px;
 }
 #about_me .left_box a{
+    display: inline-block;
+    margin-bottom: 20px;
     padding: 15px 25px;
     background-color: #fff;
     border-radius: 30px;
-}
-#about_me .my_info{
-    display: flex;
-    justify-content: space-between;
-}
-#about_me .my_info>div{
-    width: 30%;
 }
 #about_me .skill{
     margin: 25px 0;
