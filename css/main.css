@@ -229,14 +229,23 @@ body{
 #someone_say{
     text-align: center;
     padding: 80px 50px;
- /*   background-image: url("../images/art/bg16.jpg");
+    background-image: url("../images/art/bg16.jpg");
     background-repeat: no-repeat;
     background-size: 270%;
     background-position: center;
-    background-attachment: fixed;*/
-    background: url("../images/art/bg16.jpg") no-repeat  center fixed;
+    background-attachment: fixed;
 }
-
+#someone_say:before {
+    content: ' ';
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(path/to/image) center 0 no-repeat;
+    background-size: cover;
+  }
 #someone_say h1{
     padding-top: 20px;
     font-size: 90px;
