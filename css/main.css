@@ -229,6 +229,9 @@ body{
 #someone_say{
     text-align: center;
     padding: 80px 50px;
+    
+}
+#someone_say::before{
     background-image: url("../images/art/bg16.jpg");
     background-repeat: no-repeat;
     background-size: 270%;
