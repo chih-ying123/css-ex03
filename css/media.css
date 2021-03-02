@@ -78,24 +78,7 @@
     }
     
     /*--footer--*/
-    #footer{
-        background-color: #000;
-    }
-    #footer .content{
-        display: flex;
-        justify-content: space-between;
-        padding: 25px 0;
-    }
-    #footer .copyright, #footer .icon{
-        display: flex;
-        align-items: center;
-        color: #fff;
-    }
-    #footer .icon ul{
-        display: flex;
-    }
     #footer .icon i{
-        color: #fff;
         padding: 0 12px;
     }
 }
@@ -132,5 +115,11 @@
     #someone_say{
         padding: 80px 300px;
         background-size: 200%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .title .icon a{
+        padding: 15px;
     }
 }

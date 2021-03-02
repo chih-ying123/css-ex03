@@ -229,15 +229,14 @@ body{
 #someone_say{
     text-align: center;
     padding: 80px 50px;
-    
-}
-#someone_say::before{
-    background-image: url("../images/art/bg16.jpg");
+ /*   background-image: url("../images/art/bg16.jpg");
     background-repeat: no-repeat;
     background-size: 270%;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed;*/
+    background: url("../images/art/bg16.jpg") no-repeat  center fixed;
 }
+
 #someone_say h1{
     padding-top: 20px;
     font-size: 90px;
@@ -328,5 +327,5 @@ body{
 }
 #footer .icon i{
     color: #fff;
-    padding: 0 12px;
+    padding: 0 5px;
 }
