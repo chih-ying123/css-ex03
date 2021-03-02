@@ -228,33 +228,29 @@ body{
 /*--someone say--*/
 #someone_say{
     text-align: center;
-    padding: 30px;
+    padding: 80px 50px;
     background-image: url("../images/art/bg16.jpg");
     background-repeat: no-repeat;
-    background-size: 250%;
+    background-size: 270%;
     background-position: center;
     background-attachment: fixed;
 }
-#someone_say .content{
-    width: 40%;
+#someone_say h1{
+    padding-top: 20px;
+    font-size: 90px;
+    line-height: 10px;
+    color: #fff;
+    opacity: .8;
 }
-#someone_say h1,#someone_say h4,#someone_say p{
+#someone_say p{
+    margin-bottom: 7px;
     color: #fff;
     opacity: .8;
     line-height: 30px;
 }
-#someone_say h1{
-    font-size: 90px;
-    line-height: 10px;
-    opacity: .8;
-}
-#someone_say h4{
-    opacity: .9;
-}
-#someone_say p{
-    margin-top: 4px;
+#someone_say .small{
     margin-bottom: 0px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /*--about me--*/

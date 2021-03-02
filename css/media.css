@@ -1,3 +1,10 @@
+@media (min-width: 500px){
+    #someone_say{
+        padding: 80px 100px;
+        background-size: 250%;
+    }
+}
+
 @media (min-width: 768px){
     .left_box, .right_box{
         width: 50%;
@@ -46,7 +53,11 @@
     #stories .story{
         width: 31%;
     }
-    
+    /*--someone_say--*/
+    #someone_say{
+        padding: 80px 200px;
+        background-size: 200%;
+    }
     /*--about me--*/
     #about_me .my_story{
         display: flex;
@@ -116,5 +127,10 @@
     }
     #featured .right_box {
         width: 35%;
+    }
+    /*--someone_say--*/
+    #someone_say{
+        padding: 80px 300px;
+        background-size: 200%;
     }
 }
