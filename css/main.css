@@ -65,10 +65,10 @@ body{
     opacity: 0;
 }
 .title .nav ul{
-    margin: 20px;
+    padding-top: 25px;
 }
-.title .nav a{
-    padding: 12px;
+.title .nav li{
+    margin: 20px;
 }
 .title .icon{
     position: absolute;
@@ -89,28 +89,25 @@ body{
     opacity: 0;
 }
 .title .fas{
-    font-size: 20px;
+    font-size: 25px;
 }
 #menu_control{
     position: absolute;
     z-index: -1;
     opacity: 0;
 }
-#menu_control:checked ~ .title .nav,
-#menu_control:checked ~ .title .icon{
+#menu_control:checked ~ .title .nav{
     position: absolute;
     width: 200px;
+    height: 100vh;
     z-index: 98;
     opacity: 1;
     background-color: #fff;
 }
-#menu_control:checked ~ .title .nav{
-    height: 100vh;
-}
 #menu_control:checked ~ .title label .fa-times{
     position: absolute;
     top:10px;
-    right:10px;
+    right:12px;
     z-index: 99;
     opacity: 1;
 }
@@ -228,24 +225,14 @@ body{
 /*--someone say--*/
 #someone_say{
     text-align: center;
-    padding: 80px 50px;
+    padding: 80px 0;
     background-image: url("../images/art/bg16.jpg");
     background-repeat: no-repeat;
     background-size: 270%;
     background-position: center;
     background-attachment: fixed;
 }
-#someone_say:before {
-    content: ' ';
-    position: fixed;
-    z-index: -1;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: url("../images/art/bg16.jpg") center 0 no-repeat;
-    background-size: cover;
-  }
+
 #someone_say h1{
     padding-top: 20px;
     font-size: 90px;

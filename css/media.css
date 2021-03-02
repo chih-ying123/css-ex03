@@ -12,7 +12,6 @@
     .left_box{
         margin-right: 40px;
     }
-    
     /*--services--*/
     #services .content{
         display: flex;
@@ -52,12 +51,7 @@
     }
     #stories .story{
         width: 31%;
-    }
-    /*--someone_say--*/
-    #someone_say{
-        padding: 80px 200px;
-        background-size: 200%;
-    }
+    }    
     /*--about me--*/
     #about_me .my_story{
         display: flex;
@@ -97,24 +91,26 @@
         opacity: 1;
     }
     .title .nav ul{
+        padding: 0;
         display: flex;
+        align-items: center;
     }
 
       .title .nav a:hover{
             font-weight: bolder;
         }
-    
+    #menu_control:checked ~ .title .nav{
+        position: relative;
+        width: auto;
+        height: auto;
+    }
+
     /*--featured--*/
     #featured .left_box {
         width: 65%;
     }
     #featured .right_box {
         width: 35%;
-    }
-    /*--someone_say--*/
-    #someone_say{
-        padding: 80px 300px;
-        background-size: 200%;
     }
 }
 
