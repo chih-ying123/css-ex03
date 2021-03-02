@@ -1,0 +1,27 @@
+@media (max-width: 1250px){
+    .menu_btn{
+        position: relative;
+        z-index: 99;
+        font-size: 35px;
+        opacity: 1;
+    }
+    .nav{
+        position: absolute;
+        top: 0px;
+        right: -200px;
+        z-index: 98;
+        width: 200px;
+        height: 100vh;
+        background-color: #fff;
+        transition: .5s;
+    }
+    .nav ul{
+        display: block;
+    }
+    .nav li{
+        margin: 15px;
+    }
+    .title .icon{
+        opacity: 0;
+    }
+}

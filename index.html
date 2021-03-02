@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel ="stylesheet" href ="css/slick.css">
     <link rel ="stylesheet" href ="css/slick-theme.css">
+    <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
     <script src ="js/jquery.min.js"> </script>
     <script src ="js/slick.js"> </script>
     <title>切版練習3</title>
@@ -16,12 +18,18 @@
     <div class="header">
 
         <div class="content">
+            <input type="checkbox" name="" id="menu_control">
 
             <div class="title">
                 <div class="logo">
                     <img src="images/logo.png" alt="logo">
                 </div>
+
                 <div class="nav">
+                    <label for="menu_control" class="menu_btn">
+                        
+                        <i class="fas fa-times"></i>
+                    </label>
 
                     <ul>
                         <li><a href="#">home</a></li>
@@ -30,18 +38,28 @@
                         <li><a href="#stories">stories</a></li>
                         <li><a href="#about_me">about me</a></li>
                     </ul>
+
                 </div>
+
                 <div class="icon">
+
                     <ul>
-                        <li><a href="#">t</a></li>
-                        <li><a href="#">f</a></li>
-                        <li><a href="#">v</a></li>
-                        <li><a href="#">i</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                     </ul>
+
                 </div>
+                
+                <label for="menu_control" class="menu_btn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                
             </div>
 
         </div>
+
     </div>
 
     <div class="AD">
@@ -323,10 +341,11 @@
     
             <div class="icon">
                 <ul>
-                    <li><a href="#">t</a></li>
-                    <li><a href="#">f</a></li>
-                    <li><a href="#">v</a></li>
-                    <li><a href="#">i</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-pinterest"></i></i></a></li>
+                    <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                 </ul>
             </div>
 
@@ -350,20 +369,23 @@
 
         $(document).ready(function(){
             $(window).scroll(function(){ //視窗滾動
-                var scrollTop =  $(window).scrollTop();  // 視窗滾動Top位置的數值
+                var scrollTop =  $(window).scrollTop()+150;  // 視窗滾動Top位置的數值
                 var servicesTop = $('#services').offset().top;  // services設置的位置數值 
                 // offset() 用來得知元素的座標
-                console.log(scrollTop,servicesTop); 
+                var headerHeight = $('.header').height(); //抓取header的高度
+                console.log(scrollTop,servicesTop);
+
                if (scrollTop > servicesTop){
-                   $('.header').addClass('fixed');
+                   $('.header').addClass('fixed'); 
+                   $('body').css('paddingTop',headerHeight) //增加一個header的高度 減少錯位感
                }else{
-                $('.header').removeClass('fixed');
+                    $('.header').removeClass('fixed');
+                    $('body').css('paddingTop',0)
                }
             });
         });
+        
     </script>
-
-    
 
 </body>
 </html>

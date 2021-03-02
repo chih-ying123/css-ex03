@@ -42,18 +42,22 @@ body{
 }
 
 /*--header--*/
+.header{
+    padding: 15px 0;
+}
 .header .content{
     padding: 0;
 }
 .header .title{
     display: flex;
     justify-content: space-between;
-    padding: 25px 0;
+    padding: 10px 0;
 }
 .fixed{
     position: fixed;
     top: 0;
     width: 100%;
+    padding: 0;
     background-color: #fff;
     z-index: 99;
 }
@@ -61,6 +65,35 @@ body{
     display: flex;
     align-items: center;
 }
+    /*選單控制*/
+    #menu_control{
+        position: absolute;
+    }
+    .menu_btn{
+        position: absolute;
+        z-index: -2;
+        opacity: 0;
+    }
+    #menu_control:checked ~ .title .nav{
+        position: absolute;
+        right: 0;
+        transition: .5s;
+    }
+    .fa-times{
+        position: absolute;
+        right:20px;
+        opacity: 0;
+    }
+    #menu_control:checked ~ .title label .fa-times{
+        position: absolute;
+        
+        opacity: 1;
+        transition: .8s;
+    }
+    #menu_control:checked ~ .title label .fa-bars{
+        opacity: 0;
+    }
+
 .title .nav, .title .icon{
     display: flex;
     align-items: center;
@@ -315,7 +348,7 @@ body{
 #footer .icon ul{
     display: flex;
 }
-#footer .icon a{
+#footer .icon i{
     color: #fff;
-    padding: 0 10px;
+    padding: 0 12px;
 }
