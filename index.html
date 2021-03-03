@@ -22,7 +22,7 @@
 
             <div class="title">
                 <div class="logo">
-                    <img src="images/logo.png" alt="logo">
+                    <a href="#"><img src="images/logo.png" alt="logo"></a>
                 </div>
 
                 <div class="nav">
@@ -74,6 +74,17 @@
                 <li><img src="images/art/cw8.jpg" alt=""></li>
                 <li><img src="images/art/cw9.jpg" alt=""></li>
             </ul>
+
+            <buttom>
+                <i class="fas fa-expand-alt"></i>
+                <i class="fas fa-times"></i>
+            </buttom>
+            
+            <div class="dot_num">
+                <span id="this_num">01</span>
+                /
+                <span id="total_num">09</span>
+            </div>
 
         </div>
         
@@ -359,9 +370,28 @@
                 slidesToShow: 3, //顯示幾個
                 slidesToScroll: 1, //每次動幾個
                 arrows: true,  //方向圖示
-                dots: true,
+                prevArrow: '<i class="fas fa-arrow-left"></i>',
+                nextArrow: '<i class="fas fa-arrow-right"></i>',
+
+            });
+            var $status = $('#this_num');
+            var $slickElement = $('.slides');
+
+            $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
                 
-             });
+                //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+                var i = (currentSlide ? currentSlide : 0) + 1;
+                
+                document.getElementById('this_num').textContent ="0"+ i;
+                document.getElementById('total_num').textContent ="0" + slick.slideCount;
+
+            });
+
+            $(".fa-expand-alt").on("click", function(){
+                //alert("clicked!");
+                $('.slides').addClass('is-fullscreen');
+                
+            });
         });
 
         $(document).ready(function(){

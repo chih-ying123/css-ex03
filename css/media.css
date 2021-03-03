@@ -51,6 +51,10 @@
     }
     #stories .story{
         width: 31%;
+    }
+    /*--someone_say--*/
+    #someone_say{
+        background-size: 200%;
     }    
     /*--about me--*/
     #about_me .my_story{
@@ -95,10 +99,9 @@
         display: flex;
         align-items: center;
     }
-
-      .title .nav a:hover{
-            font-weight: bolder;
-        }
+    .title .nav a{
+        padding: 0 15px;
+    }
     #menu_control:checked ~ .title .nav{
         position: relative;
         width: auto;
@@ -112,10 +115,21 @@
     #featured .right_box {
         width: 35%;
     }
+    /*--someone_say--*/
+    #someone_say{
+        background-size: 130%;
+    }
 }
 
 @media (min-width: 1200px) {
+    .title .nav a{
+        padding: 0 20px;
+    }
     .title .icon a{
-        padding: 15px;
+        padding: 12px;
+    }
+    /*--someone_say--*/
+    #someone_say{
+        background-size: 100%;
     }
 }

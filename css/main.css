@@ -28,6 +28,9 @@ p{
 a{
     text-transform: uppercase;
 }
+a:hover, .title i:hover{
+    color: rgb(219, 181, 181);
+}
 /* 網頁主色調 色票 #f5efef  #f6f7fc  */
 body{
     background-color: #f6f7fc;
@@ -47,7 +50,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 8px 0;
 }
 .fixed{
     position: fixed;
@@ -68,7 +71,10 @@ body{
     padding-top: 25px;
 }
 .title .nav li{
-    margin: 20px;
+    margin: 20px 0;
+}
+.title .nav a{
+    padding: 0 30px;
 }
 .title .icon{
     position: absolute;
@@ -88,8 +94,9 @@ body{
     z-index: -1;
     opacity: 0;
 }
-.title .fas{
+.title .menu_btn{
     font-size: 25px;
+    cursor: pointer;
 }
 #menu_control{
     position: absolute;
@@ -114,20 +121,67 @@ body{
 
 /*--輪播--*/
 .AD .content{
+    position: relative;
     padding-top: 0;
 }
-    /*--圖片間距--*/
-.slick-slide {
+.AD .content img{
+    cursor: url("../images/openhand.cur"),default;
+}
+.AD .content img:active{
+    cursor: url("../images/closedhand.cur"),default;
+}
+.slick-slide { /*--圖片間距--*/
     margin-left: 10px;
 }
 .slick-list {
     margin-left: -10px;
     border-radius: 5px;
 }
-    /*方向大小*/
-.slick-prev:before,
-.slick-next:before{
-    font-size: 30px;
+.AD i{
+    position: absolute;
+    z-index: 80;
+    padding: 10px 11px;
+    background-color: rgba(255,255,255,.7);
+    border-radius: 20px;
+    cursor: pointer;
+}
+.AD .fa-arrow-left{
+    top:50%;
+    left: 20px;
+}
+.AD .fa-arrow-right {
+    top:50%;
+    right: 20px;
+}
+.AD .fa-expand-alt{
+    top:10px;
+    right:10px;
+    transform:scaleX(-1);
+}
+.AD .fa-times{
+    position: absolute;
+    top:10px;
+    right:10px;
+    opacity: 0;
+}
+.AD .fas:hover{
+    background-color:#fff;
+}
+.dot_num{
+    margin-top: 10px;
+    text-align: center;
+}
+.is-fullscreen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: hsla(0, 0%, 0%, .9);
+    padding-bottom: 35px;
+    z-index: 1;
 }
 
 /*--services--*/
@@ -232,7 +286,6 @@ body{
     background-position: center;
     background-attachment: fixed;
 }
-
 #someone_say h1{
     padding-top: 20px;
     font-size: 90px;
