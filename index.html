@@ -263,77 +263,83 @@
                 </div>
     
             </div>
-            
-            <div class="my_info">
-    
-                <div class="my_skills">
-                    <h3>my skills</h3>
-
-                    <div class="skill">
-                        <div class="text">
-                            <p>photoshop</p><p id="percent_num">90 %</p>
-                        </div>
-                        
-                        <div class="percent_bar">
-                            <div class="percent bar1" style="width: 90%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill">
-                        <div class="text">
-                            <p>final cut</p><p>80 %</p>
-                        </div>
-                        
-                        <div class="percent_bar">
-                            <div class="percent  bar2" style="width: 80%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill">
-                        <div class="text">
-                            <p>studio photography</p><p>85 %</p>
-                        </div>
-                        
-                        <div class="percent_bar">
-                            <div class="percent  bar3" style="width: 85%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill">
-                        <div class="text">
-                            <p>motion video</p><p>65 %</p>
-                        </div>
-                        
-                        <div class="percent_bar">
-                            <div class="percent  bar4" style="width: 65%;"></div>
-                        </div>
-                    </div>
-
-                </div>
-    
-                <div class="instagram">
-                    <h3>instagram shots</h3>
-                </div>
-    
-                <div class="my_equipment">
-                    <h3>my equipment</h3>
-                    <ul>
-                        <li><span>●</span>Lorem ipsum dolor sit amet.</li>
-                        <li><span>●</span>Lorem, ipsum dolor.</li>
-                        <li><span>●</span>dolor sit amet consectetur adipisicing.</li>
-                        <li><span>●</span>Lorem ipsum dolor sit.</li>
-                        <li><span>●</span>consectetur adipisicing elit. Beatae!</li>
-                        <li><span>●</span>Quidem laudantium soluta</li>
-                        <li><span>●</span>Lorem, ipsum dolor.</li>
-                        <li><span>●</span>Lorem ipsum dolor sit amet.</li>
-                    </ul>
-                </div>
-    
-            </div>
 
         </div>
 
     </div>
+
+
+    <div id="my_slills">
+
+        <div class="content">
+
+            <div class="my_skills">
+                <h3>my skills</h3>
+
+                <div class="skill">
+                    <div class="text">
+                        <p>photoshop</p><p id="photoshop_num">0%</p>
+                    </div>
+                        
+                    <div class="percent_bar">
+                        <div class="percent bar1" id=photoshop></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                     <div class="text">
+                        <p>final cut</p><p id="cut_num">0%</p>
+                    </div>
+                        
+                    <div class="percent_bar">
+                        <div class="percent  bar2" id="cut"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="text">
+                        <p>studio photography</p><p id="studio_num">0%</p>
+                    </div>
+                        
+                    <div class="percent_bar">
+                        <div class="percent  bar3" id="studio"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="text">
+                        <p>motion video</p><p id="motion_num">0%</p>
+                    </div>
+                        
+                    <div class="percent_bar">
+                        <div class="percent  bar4" id="motion"></div>
+                    </div>
+                </div>
+
+            </div>
+    
+            <div class="instagram">
+                <h3>instagram shots</h3>
+            </div>
+    
+            <div class="my_equipment">
+                <h3>my equipment</h3>
+                <ul>
+                    <li><span>●</span>Lorem ipsum dolor sit amet.</li>
+                    <li><span>●</span>Lorem, ipsum dolor.</li>
+                    <li><span>●</span>dolor sit amet consectetur adipisicing.</li>
+                    <li><span>●</span>Lorem ipsum dolor sit.</li>
+                    <li><span>●</span>consectetur adipisicing elit. Beatae!</li>
+                    <li><span>●</span>Quidem laudantium soluta</li>
+                    <li><span>●</span>Lorem, ipsum dolor.</li>
+                    <li><span>●</span>Lorem ipsum dolor sit amet.</li>
+                </ul>
+            </div>
+    
+        </div>
+    </div>    
+
+   
 
     <div id="footer">
 
@@ -374,6 +380,7 @@
                 arrows: true,  //方向圖示
                 prevArrow: '<i class="fas fa-arrow-left"></i>',
                 nextArrow: '<i class="fas fa-arrow-right"></i>',
+                adaptiveHeight: true,
                 variableWidth: true
             });
             var $status = $('#this_num');
@@ -399,7 +406,7 @@
 
         });
 
-       $(document).ready(function(){
+        $(document).ready(function(){
             $(window).scroll(function(){ //視窗滾動
                 var scrollTop =  $(window).scrollTop()+150;  // 視窗滾動Top位置的數值
                 var servicesTop = $('#services').offset().top;  // services設置的位置數值 
@@ -407,17 +414,99 @@
                 var headerHeight = $('.header').height(); //抓取header的高度
                 console.log(scrollTop,servicesTop);
 
-               if (scrollTop > servicesTop){
+                if (scrollTop > servicesTop){
                    $('.header').addClass('fixed'); 
                    $('body').css('paddingTop',headerHeight) //增加一個header的高度 減少錯位感
-               }else{
+                }else{
                     $('.header').removeClass('fixed');
                     $('body').css('paddingTop',0)
-               }
+                }
+            
+               
+                var about_meHeight = $('#about_me').height(); //抓取about_me的高度
+                var about_meTop = $('#about_me').offset().top;  // about_me設置的位置數值
+                var playHeight = about_meTop + (about_meHeight*.6);
+                console.log(about_meHeight,about_meTop,playHeight);
+                var i = 0;
+                if (scrollTop > playHeight){
+                    var i = 0;
+                    var x = 0;
+                    var y = 0;
+                    var z = 0;
+                    
+                    if (i == 0) {
+                        i = 1;
+                        var bar1 = document.getElementById("photoshop_num");
+                        var photoshop_width = 1;
+
+                        var id = setInterval(frame, 10);
+                        function frame() {
+                            if (photoshop_width >= 90) {
+                                clearInterval(id);
+                                i = 0;
+                            } else {
+                                photoshop_width++;
+                                photoshop.style.width = photoshop_width + "%";
+                                bar1.innerHTML = photoshop_width  + "%";
+                            }
+                        }
+                    }
+                    if (x == 0) {
+                        x = 1;
+                        var bar2 = document.getElementById("cut_num");
+                        var cut_width = 1;
+
+                        var id = setInterval(frame, 10);
+                        function frame() {
+                            if (cut_width >= 80) {
+                                clearInterval(id);
+                                x = 0;
+                            } else {
+                                cut_width++;
+                                cut.style.width = cut_width + "%";
+                                bar2.innerHTML = cut_width  + "%";
+                            }
+                        }
+                    }
+                    if (y == 0) {
+                        y = 1;
+                        var bar3 = document.getElementById("studio_num");
+                        var studio_width = 1;
+
+                        var id = setInterval(frame, 10);
+                        function frame() {
+                            if (studio_width >= 85) {
+                                clearInterval(id);
+                                y = 0;
+                            } else {
+                                studio_width++;
+                                studio.style.width = studio_width + "%";
+                                bar3.innerHTML = studio_width  + "%";
+                            }
+                        }
+                    }
+                    if (z == 0) {
+                        z = 1;
+                        var bar4 = document.getElementById("motion_num");
+                        var motion_width = 1;
+
+                        var id = setInterval(frame, 10);
+                        function frame() {
+                            if (motion_width >= 65) {
+                                clearInterval(id);
+                                z = 0;
+                            } else {
+                                motion_width++;
+                                motion.style.width = motion_width + "%";
+                                bar4.innerHTML = motion_width  + "%";
+                            }
+                        }
+                    }
+                }
+            
             });
 
-            var percent_num = $('#percent_num').wight(); //抓取header的高度
-                console.log(percent_num);
+            
         });
         
     </script>

@@ -60,19 +60,18 @@
     #about_me .my_story{
         display: flex;
         justify-content: space-between;
-        margin-bottom: 40px;
     }
     #about_me .left_box,#about_me .right_box{
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    #about_me .my_info{
+    #my_slills .content{
         display: flex;
         justify-content: space-between;
     }
-    #about_me .my_info>div{
-        width: 30%;
+    #my_slills .content>div{
+        width: 31%;
     }
     
     /*--footer--*/
