@@ -78,7 +78,6 @@
             </ul>
 
             <i class="fas fa-expand-alt" id=a1></i>
-            <i class="fas fa-times"></i>
             
             <div class="dot_num">
                 <span id="this_num">01</span>
@@ -380,7 +379,6 @@
                 arrows: true,  //方向圖示
                 prevArrow: '<i class="fas fa-arrow-left"></i>',
                 nextArrow: '<i class="fas fa-arrow-right"></i>',
-                adaptiveHeight: true,
                 variableWidth: true
             });
             var $status = $('#this_num');
@@ -407,8 +405,9 @@
         });
 
         $(document).ready(function(){
+            var a = 0
             $(window).scroll(function(){ //視窗滾動
-                var scrollTop =  $(window).scrollTop()+150;  // 視窗滾動Top位置的數值
+                var scrollTop =  $(window).scrollTop();  // 視窗滾動Top位置的數值
                 var servicesTop = $('#services').offset().top;  // services設置的位置數值 
                 // offset() 用來得知元素的座標
                 var headerHeight = $('.header').height(); //抓取header的高度
@@ -425,85 +424,88 @@
                
                 var about_meHeight = $('#about_me').height(); //抓取about_me的高度
                 var about_meTop = $('#about_me').offset().top;  // about_me設置的位置數值
-                var playHeight = about_meTop + (about_meHeight*.6);
+                var playHeight = about_meTop + (about_meHeight*.3);
                 console.log(about_meHeight,about_meTop,playHeight);
-                var i = 0;
-                if (scrollTop > playHeight){
-                    var i = 0;
-                    var x = 0;
-                    var y = 0;
-                    var z = 0;
+               
+                if (a==0){
                     
-                    if (i == 0) {
-                        i = 1;
-                        var bar1 = document.getElementById("photoshop_num");
-                        var photoshop_width = 1;
+                    if (scrollTop > playHeight){
+                    a ++;
+                        var i = 0;
+                        var x = 0;
+                        var y = 0;
+                        var z = 0;
+                        
+                        if (i == 0) {
+                            i = 1;
+                            var bar1 = document.getElementById("photoshop_num");
+                            var photoshop_width = 1;
 
-                        var id = setInterval(frame, 10);
-                        function frame() {
-                            if (photoshop_width >= 90) {
-                                clearInterval(id);
-                                i = 0;
-                            } else {
-                                photoshop_width++;
-                                photoshop.style.width = photoshop_width + "%";
-                                bar1.innerHTML = photoshop_width  + "%";
+                            var id = setInterval(frame, 10); //setInterval 每秒都去執行 frame
+                            function frame() {
+                                if (photoshop_width >= 90) {
+                                    clearInterval(id);  //clearInterval 停止執行
+                                    i = 0;
+                                } else {
+                                    photoshop_width++;
+                                    photoshop.style.width = photoshop_width + "%";
+                                    bar1.innerHTML = photoshop_width  + "%";
+                                }
                             }
                         }
-                    }
-                    if (x == 0) {
-                        x = 1;
-                        var bar2 = document.getElementById("cut_num");
-                        var cut_width = 1;
+                        if (x == 0) {
+                            x = 1;
+                            var bar2 = document.getElementById("cut_num");
+                            var cut_width = 1;
 
-                        var id = setInterval(frame, 10);
-                        function frame() {
-                            if (cut_width >= 80) {
-                                clearInterval(id);
-                                x = 0;
-                            } else {
-                                cut_width++;
-                                cut.style.width = cut_width + "%";
-                                bar2.innerHTML = cut_width  + "%";
+                            var id = setInterval(frame, 10);
+                            function frame() {
+                                if (cut_width >= 80) {
+                                    clearInterval(id);
+                                    x = 0;
+                                } else {
+                                    cut_width++;
+                                    cut.style.width = cut_width + "%";
+                                    bar2.innerHTML = cut_width  + "%";
+                                }
                             }
                         }
-                    }
-                    if (y == 0) {
-                        y = 1;
-                        var bar3 = document.getElementById("studio_num");
-                        var studio_width = 1;
+                        if (y == 0) {
+                            y = 1;
+                            var bar3 = document.getElementById("studio_num");
+                            var studio_width = 1;
 
-                        var id = setInterval(frame, 10);
-                        function frame() {
-                            if (studio_width >= 85) {
-                                clearInterval(id);
-                                y = 0;
-                            } else {
-                                studio_width++;
-                                studio.style.width = studio_width + "%";
-                                bar3.innerHTML = studio_width  + "%";
+                            var id = setInterval(frame, 10);
+                            function frame() {
+                                if (studio_width >= 85) {
+                                    clearInterval(id);
+                                    y = 0;
+                                } else {
+                                    studio_width++;
+                                    studio.style.width = studio_width + "%";
+                                    bar3.innerHTML = studio_width  + "%";
+                                }
                             }
                         }
-                    }
-                    if (z == 0) {
-                        z = 1;
-                        var bar4 = document.getElementById("motion_num");
-                        var motion_width = 1;
+                        if (z == 0) {
+                            z = 1;
+                            var bar4 = document.getElementById("motion_num");
+                            var motion_width = 1;
 
-                        var id = setInterval(frame, 10);
-                        function frame() {
-                            if (motion_width >= 65) {
-                                clearInterval(id);
-                                z = 0;
-                            } else {
-                                motion_width++;
-                                motion.style.width = motion_width + "%";
-                                bar4.innerHTML = motion_width  + "%";
+                            var id = setInterval(frame, 10);
+                            function frame() {
+                                if (motion_width >= 65) {
+                                    clearInterval(id);
+                                    z = 0;
+                                } else {
+                                    motion_width++;
+                                    motion.style.width = motion_width + "%";
+                                    bar4.innerHTML = motion_width  + "%";
+                                }
                             }
                         }
                     }
                 }
-            
             });
 
             
