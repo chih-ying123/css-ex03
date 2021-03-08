@@ -311,6 +311,7 @@ a:hover, .title i:hover{
     }
 
 /*--someone say--*/
+/*
 #someone_say{
     text-align: center;
     padding: 80px 0;
@@ -319,7 +320,7 @@ a:hover, .title i:hover{
     background-size: 270%;
     background-position: center;
     background-attachment: fixed;
-}
+} */
 #someone_say:before {
     content: ' ';
     position: fixed;
