@@ -311,16 +311,15 @@ a:hover, .title i:hover{
     }
 
 /*--someone say--*/
-/*
 #someone_say{
     text-align: center;
     padding: 80px 0;
-    background-image: url("../images/art/bg16.jpg");
+  /*  background-image: url("../images/art/bg16.jpg");
     background-repeat: no-repeat;
     background-size: 270%;
     background-position: center;
-    background-attachment: fixed;
-} */
+    background-attachment: fixed; */
+}
 #someone_say:before {
     content: ' ';
     position: fixed;
