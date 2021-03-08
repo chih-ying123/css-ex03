@@ -87,17 +87,6 @@
 
             <div id="myModal" class="modal">
                 <span class="close">&times;</span>
-                <ul class="modal-content slides_big ">
-                    <li><img src="images/art/cw1.jpg" alt=""></li>
-                    <li><img src="images/art/cw2.jpg" alt=""></li>
-                    <li><img src="images/art/cw3.jpg" alt=""></li>
-                    <li><img src="images/art/cw4.jpg" alt=""></li>
-                    <li><img src="images/art/cw5.jpg" alt=""></li>
-                    <li><img src="images/art/cw6.jpg" alt=""></li>
-                    <li><img src="images/art/cw7.jpg" alt=""></li>
-                    <li><img src="images/art/cw8.jpg" alt=""></li>
-                    <li><img src="images/art/cw9.jpg" alt=""></li>
-                </ul>
             </div>
 
         </div>
@@ -411,24 +400,14 @@
             
             a1.onclick = function(){
                 modal.style.display = "block";
-                
+                $('.slides').addClass('fullscreen');
             }
 
             var span = document.getElementsByClassName("close")[0];
             span.onclick = function() { 
                 modal.style.display = "none";
+                $('.slides').removeClass('fullscreen');
             }
-
-            $('.slides_big').slick({
-                centerMode: true, //第一個在中心
-                centerPadding: '0px',
-                slidesToShow: 5, //顯示幾個
-                slidesToScroll: 1, //每次動幾個
-                arrows: true,  //方向圖示
-                prevArrow: '<i class="fas fa-arrow-left"></i>',
-                nextArrow: '<i class="fas fa-arrow-right"></i>',
-                variableWidth: true,
-            });
         });
 
         $(document).ready(function(){

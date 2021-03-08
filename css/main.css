@@ -176,13 +176,12 @@ a:hover, .title i:hover{
 .modal {
     display: none;
     position: fixed;
-    z-index: 99;
+    z-index: 120;
     padding:0 ;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.9);
+    height: 10%;
 }
 .modal-content {
     display: block
@@ -206,7 +205,17 @@ a:hover, .title i:hover{
     text-decoration: none;
     cursor: pointer;
 }
-
+.fullscreen {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 100;
+}
 
 
 /*--services--*/
