@@ -22,14 +22,14 @@
     <div class="header">
 
         <div class="content">
-            <input type="checkbox" name="" id="menu_control">
+            <input type="checkbox" name="menu_control" id="menu_control">
 
             <div class="title">
                 <div class="logo">
                     <a href="#"><img src="images/logo.png" alt="logo"></a>
                 </div>
 
-                <div class="nav">
+                <div class="nav" id="nav_bar">
 
                     <ul>
                         <li><a href="#">home</a></li>
@@ -375,6 +375,11 @@
     <script>
 
         $(document).ready(function(){
+
+            $("#nav_bar").click(function(){
+                menu_control.checked = false;
+            })
+        
             $('.slides').slick({
                 centerMode: true, //第一個在中心
                 centerPadding: '0px',
@@ -383,7 +388,8 @@
                 arrows: true,  //方向圖示
                 prevArrow: '<i class="fas fa-arrow-left"></i>',
                 nextArrow: '<i class="fas fa-arrow-right"></i>',
-                variableWidth: true,
+                
+                //variableWidth: true,
             })
             var $status = $('#this_num');
             var $slickElement = $('.slides');
@@ -428,7 +434,7 @@
                     $('.header').removeClass('fixed');
                     $('body').css('paddingTop',0)
                 }
-            
+                
                
                 var about_meHeight = $('#about_me').height(); //抓取about_me的高度
                 var about_meTop = $('#about_me').offset().top;  // about_me設置的位置數值
@@ -516,7 +522,6 @@
                 }
             });
 
-            
         });
         
     </script>
