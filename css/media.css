@@ -12,8 +12,11 @@
     .left_box{
         margin-right: 40px;
     }
+    .slides img{
+        height: 400px;
+    }
     .fullscreen {
-        padding: 150px 0 ;
+        padding-top: 200px  ;
     }
     /*--services--*/
     #services .content{
@@ -122,8 +125,11 @@
         width: auto;
         height: auto;
     }
+    .slides img{
+        height: 500px;
+    }
     .fullscreen {
-        padding: 80px 0 ;
+        padding-top: 150px ;
     }
     /*--featured--*/
     #featured .left_box {
@@ -148,6 +154,9 @@
     }
     .title .icon a{
         padding: 12px;
+    }
+    .slides img{
+        height: 700px;
     }
     /*--someone_say--*/
     #someone_say{

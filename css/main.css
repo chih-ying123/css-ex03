@@ -152,6 +152,9 @@ a:hover, .title i:hover{
     margin-left: -10px;
     border-radius: 5px;
 }
+.slides img{
+    height: 300px;
+}
 .AD i{
     position: absolute;
     z-index: 80;
@@ -226,7 +229,7 @@ a:hover, .title i:hover{
 	right: 0;
 	bottom: 0;
 	left: 0;
-    padding-top: 250px;
+    padding-top: 200px;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.9);
