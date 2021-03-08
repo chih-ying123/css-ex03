@@ -198,7 +198,7 @@ a:hover, .title i:hover{
     opacity:.8;
     border-radius:50%;
     transition: 0.3s;
-    z-index: 100;
+    z-index: 110;
 }
 .close:hover,
 .close:focus {
