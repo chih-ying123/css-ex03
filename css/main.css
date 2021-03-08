@@ -38,6 +38,19 @@ a:hover, .title i:hover{
 .header, .AD, #featured{
     background-color: #f5efef;
 }
+.fa-arrow-up{
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    z-index: 100;
+    padding: 10px 11px;
+    background-color: rgba(255,255,255,.7);
+    border-radius: 50%;
+}
+.fa-arrow-up:hover{
+    color: rgb(219, 181, 181);
+    background-color: #fff;
+}
 
 /*--header--*/
 .header{
@@ -438,19 +451,16 @@ a:hover, .title i:hover{
     background-color: #000;
 }
 #footer .content{
-    display: flex;
-    justify-content: space-between;
-    padding: 25px 0;
+    padding: 50px 0;
 }
-#footer .copyright, #footer .icon{
-    display: flex;
-    align-items: center;
+#footer .copyright, #footer .icon {
+    padding: 20px 0;
     color: #fff;
 }
 #footer .icon ul{
     display: flex;
 }
 #footer .icon i{
+    padding: 0 10px;
     color: #fff;
-    padding: 0 5px;
 }

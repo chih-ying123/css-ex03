@@ -17,6 +17,8 @@
     <title>切版練習3</title>
 </head>
 <body>
+    <a href="#"><i class="fas fa-arrow-up"></i></a>
+
     <div class="header">
 
         <div class="content">
@@ -414,7 +416,7 @@
             var a = 0
             $(window).scroll(function(){ //視窗滾動
                 var scrollTop =  $(window).scrollTop();  // 視窗滾動Top位置的數值
-                var servicesTop = $('#services').offset().top;  // services設置的位置數值 
+                var servicesTop = $('#services').offset().top -150;  // services設置的位置數值 
                 // offset() 用來得知元素的座標
                 var headerHeight = $('.header').height(); //抓取header的高度
                 console.log(scrollTop,servicesTop);

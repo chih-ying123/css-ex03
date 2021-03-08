@@ -78,8 +78,17 @@
     }
     
     /*--footer--*/
-    #footer .icon i{
-        padding: 0 12px;
+    #footer .content{
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 0;
+    }
+    #footer>div{
+        display: flex;
+        align-items: center;
+    }
+    #footer .icon i {
+        padding: 0 5px;
     }
 }
 
@@ -120,6 +129,10 @@
     /*--someone_say--*/
     #someone_say{
         background-size: 130%;
+    }
+    /*--footer--*/
+    #footer .icon i {
+        padding: 0 10px;
     }
 }
 
